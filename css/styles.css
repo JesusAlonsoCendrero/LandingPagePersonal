@@ -1059,6 +1059,8 @@ body:has(a:hover) .cursor-trail { width: 48px; height: 48px; border-color: rgba(
 @media (max-width: 768px) {
   .section { padding: 5rem 0; }
 
+  html, body { overflow-x: hidden; max-width: 100%; }
+
   .nav-links {
     display: none;
     position: fixed;
@@ -1074,10 +1076,18 @@ body:has(a:hover) .cursor-trail { width: 48px; height: 48px; border-color: rgba(
   .nav-links.open { display: flex; }
   .nav-toggle { display: flex; z-index: 101; }
 
-  .hero-title { font-size: clamp(2.75rem, 12vw, 4.5rem); }
+  .hero-title { font-size: clamp(2.4rem, 10vw, 3.5rem); }
   .services-grid { grid-template-columns: 1fr; }
   .cases-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+
+  .contact-title { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+  .contact-inner { padding: 3rem 1.25rem; }
+
+  .detail-cta .contact-title { font-size: clamp(1.4rem, 6vw, 1.9rem); }
+  .detail-cta-inner { padding: 2.5rem 1.25rem; }
+
+  .about-pillars { gap: 1.25rem; }
 
   .cursor, .cursor-trail { display: none; }
   body { cursor: auto; }
