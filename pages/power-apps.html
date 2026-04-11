@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Apps — Jesús Alonso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .detail-icon-large { background: rgba(116,39,116,0.15); border: 1px solid rgba(116,39,116,0.25); }
+    .detail-title span { color: #b86ab8; }
+    .case-number { color: #b86ab8; }
+    .case-result { color: #b86ab8; background: rgba(116,39,116,0.1); border-color: rgba(116,39,116,0.2); }
+    .case-card:hover { border-color: rgba(116,39,116,0.3); }
+    .section-title em { color: #b86ab8 !important; }
+    .detail-hero::after {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(116,39,116,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">JA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">Sobre mí</a></li>
+        <li><a href="../index.html#services">Servicios</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Agenda una consulta</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="detail-hero">
+    <div class="detail-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+    </div>
+    <div class="container">
+      <a href="../index.html#services" class="detail-back reveal">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Volver a servicios
+      </a>
+      <div class="detail-icon-large reveal">
+        <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="14" height="14" rx="3" fill="#b86ab8"/><rect x="22" y="4" width="14" height="14" rx="3" fill="#b86ab8" opacity=".6"/><rect x="4" y="22" width="14" height="14" rx="3" fill="#b86ab8" opacity=".6"/><rect x="22" y="22" width="14" height="14" rx="3" fill="#b86ab8" opacity=".3"/></svg>
+      </div>
+      <h1 class="detail-title reveal">Power <span>Apps</span></h1>
+      <p class="detail-subtitle reveal">
+        Aplicaciones internas a medida para digitalizar los procesos de tu empresa. Sencillas, accesibles desde cualquier dispositivo y adaptadas a tu forma de trabajar.
+      </p>
+    </div>
+  </section>
+
+  <section class="detail-cases">
+    <div class="container">
+      <div class="section-tag reveal" style="color: #b86ab8;">Casos prácticos</div>
+      <h2 class="section-title reveal" style="margin-bottom: 3rem;">
+        ¿Qué aplicaciones puede<br />necesitar tu <em>empresa</em>?
+      </h2>
+      <div class="cases-grid">
+
+        <div class="case-card reveal">
+          <div class="case-number">01 · Logística</div>
+          <h3 class="case-title">Gestión de inventario con escáner</h3>
+          <p class="case-desc">Aplicación de control de almacén con lectura de código de barras o QR desde el móvil. Entradas, salidas, traspasos entre ubicaciones y alertas de mínimo de stock conectadas directamente al ERP.</p>
+          <span class="case-result">Inventario siempre actualizado</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">02 · Ventas</div>
+          <h3 class="case-title">App de gestión de visitas comerciales</h3>
+          <p class="case-desc">El comercial registra desde su móvil cada visita a cliente: notas, pedidos, fotos y geolocalización. Integrado con Dynamics 365 Sales para actualizar oportunidades y actividades al instante.</p>
+          <span class="case-result">CRM en el bolsillo del comercial</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">03 · RRHH</div>
+          <h3 class="case-title">App de control de presencia y registros</h3>
+          <p class="case-desc">Registro de entrada y salida desde móvil o tablet. Control de horas extras, ausencias y jornada partida. Cumplimiento de la normativa de registro horario sin complicaciones.</p>
+          <span class="case-result">Cumplimiento normativo automático</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">04 · Formación</div>
+          <h3 class="case-title">App de formación para el personal</h3>
+          <p class="case-desc">Los empleados acceden a cursos, tests y material formativo según su rol. RRHH crea itinerarios, hace seguimiento del progreso y genera informes de completación automáticamente, sin necesidad de plataformas externas.</p>
+          <span class="case-result">Formación interna sin LMS externo</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">05 · Administración</div>
+          <h3 class="case-title">Gestión de solicitudes internas</h3>
+          <p class="case-desc">Portal interno para que los empleados soliciten material de oficina, soporte IT, accesos o cualquier tipo de recurso. Con seguimiento del estado, notificaciones y historial centralizado en SharePoint.</p>
+          <span class="case-result">Helpdesk interno sin email</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">06 · ERP / CRM</div>
+          <h3 class="case-title">ERP o CRM personalizado con Power Apps</h3>
+          <p class="case-desc">Power Apps permite construir un ERP o CRM a medida desde cero: módulos de ventas, compras, clientes o inventario totalmente adaptados a tu operativa, con Dataverse como base de datos. Sin licencias de software tradicional.</p>
+          <span class="case-result">Tu propio ERP sin licencias millonarias</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-cta">
+    <div class="container">
+      <div class="detail-cta-inner">
+        <div class="contact-bg-glow"></div>
+        <div class="section-tag reveal" style="justify-content:center;color:#b86ab8;">Siguiente paso</div>
+        <h2 class="contact-title reveal">¿Tienes un proceso que<br />merece una aplicación<br /><em>propia</em>?</h2>
+        <p class="contact-desc reveal">Cuéntame cómo trabaja tu equipo hoy y diseñamos juntos la app que lo digitaliza, sin desarrollos complicados ni licencias de software externas.</p>
+        <div class="contact-actions reveal">
+          <a href="https://calendly.com/jesusalonsopp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" style="background:#742774;box-shadow:0 0 30px rgba(116,39,116,0.4)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h14" stroke="currentColor" stroke-width="1.5"/><path d="M7 2v4M13 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Agenda tu consulta</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

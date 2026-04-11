@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power BI — Jesús Alonso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    :root { --accent: #F2C811; }
+    .detail-hero { background: linear-gradient(135deg, #0d1220 0%, #0a0d18 100%); }
+    .detail-hero::after {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(242,200,17,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .detail-icon-large { background: rgba(242,200,17,0.12); border: 1px solid rgba(242,200,17,0.2); }
+    .detail-title span { color: #F2C811; }
+    .case-number { color: #F2C811; }
+    .case-result { color: #F2C811; background: rgba(242,200,17,0.08); border-color: rgba(242,200,17,0.15); }
+    .case-card:hover { border-color: rgba(242,200,17,0.3); }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">JA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">Sobre mí</a></li>
+        <li><a href="../index.html#services">Servicios</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Agenda una consulta</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="detail-hero">
+    <div class="detail-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+    </div>
+    <div class="container">
+      <a href="../index.html#services" class="detail-back reveal">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Volver a servicios
+      </a>
+      <div class="detail-icon-large reveal">
+        <svg viewBox="0 0 40 40" fill="none"><rect x="2" y="20" width="8" height="18" rx="1.5" fill="#F2C811" opacity=".4"/><rect x="13" y="13" width="8" height="25" rx="1.5" fill="#F2C811" opacity=".7"/><rect x="24" y="5" width="8" height="33" rx="1.5" fill="#F2C811"/><rect x="35" y="10" width="4" height="28" rx="1.5" fill="#F2C811" opacity=".6"/></svg>
+      </div>
+      <h1 class="detail-title reveal">Power <span>BI</span></h1>
+      <p class="detail-subtitle reveal">
+        Convierte tus datos en decisiones. Dashboards e informes personalizados para tener el control total de tu negocio en tiempo real.
+      </p>
+    </div>
+  </section>
+
+  <section class="detail-cases">
+    <div class="container">
+      <div class="section-tag reveal" style="color: #F2C811;">Casos prácticos</div>
+      <h2 class="section-title reveal" style="margin-bottom: 3rem;">
+        ¿Qué puedes <em style="color:#F2C811">visualizar</em><br />con Power BI?
+      </h2>
+      <div class="cases-grid">
+
+        <div class="case-card reveal">
+          <div class="case-number">01 · Ventas</div>
+          <h3 class="case-title">Dashboard de rendimiento comercial</h3>
+          <p class="case-desc">Visualiza en tiempo real el estado de tus ventas: facturación por comercial, comparativa mensual, tasa de conversión y pipeline de oportunidades. Conectado directamente a tu CRM o ficheros Excel.</p>
+          <span class="case-result">↑ Decisiones de venta 3x más rápidas</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">02 · Operaciones</div>
+          <h3 class="case-title">Control de producción y stock</h3>
+          <p class="case-desc">Panel de control de inventario, rotación de producto y alertas de stock mínimo. Integrado con Business Central o ERP para tener visibilidad instantánea del estado de almacén.</p>
+          <span class="case-result">↓ 40% de roturas de stock</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">03 · Finanzas</div>
+          <h3 class="case-title">Informe financiero ejecutivo</h3>
+          <p class="case-desc">Cuadro de mando con P&L, flujo de caja, comparativa de presupuesto vs real y KPIs financieros clave. Actualización automática desde contabilidad, sin tocar Excel.</p>
+          <span class="case-result">Cierre mensual en horas, no días</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">04 · RRHH</div>
+          <h3 class="case-title">Análisis de personas y rendimiento</h3>
+          <p class="case-desc">Absentismo, rotación, horas por departamento, coste de personal y evolución de plantilla. Proporciona a dirección una visión clara del capital humano de la empresa.</p>
+          <span class="case-result">Visibilidad real del equipo</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">05 · Marketing</div>
+          <h3 class="case-title">ROI de campañas y canales digitales</h3>
+          <p class="case-desc">Integración con Google Ads, Meta y plataformas de email. Análisis del coste por lead, conversión por canal y retorno de cada campaña en un solo dashboard unificado.</p>
+          <span class="case-result">Inversión publicitaria optimizada</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">06 · Dirección</div>
+          <h3 class="case-title">Cuadro de mando ejecutivo (CMI)</h3>
+          <p class="case-desc">Todos los KPIs estratégicos de tu empresa en una sola pantalla. Diseñado para directivos que necesitan una visión global rápida sin depender de informes manuales de cada departamento.</p>
+          <span class="case-result">Reuniones de dirección sin Excel</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-cta">
+    <div class="container">
+      <div class="detail-cta-inner">
+        <div class="contact-bg-glow"></div>
+        <div class="section-tag reveal" style="justify-content:center;color:#F2C811;">Siguiente paso</div>
+        <h2 class="contact-title reveal">¿Quieres ver tus datos<br />en tiempo <em>real</em>?</h2>
+        <p class="contact-desc reveal">Agenda una consulta gratuita y analizamos qué datos tiene tu empresa y cómo convertirlos en decisiones claras.</p>
+        <div class="contact-actions reveal">
+          <a href="https://calendly.com/jesusalonsopp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" style="background:#F2C811;color:#0a0e1a;box-shadow:0 0 30px rgba(242,200,17,0.3)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h14" stroke="currentColor" stroke-width="1.5"/><path d="M7 2v4M13 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Agenda tu consulta</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

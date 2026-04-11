@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Automate — Jesús Alonso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    :root { --accent: #0066FF; }
+    .detail-hero::after {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,102,255,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .detail-icon-large { background: rgba(0,102,255,0.12); border: 1px solid rgba(0,102,255,0.2); }
+    .detail-title span { color: #4d8aff; }
+    .case-number { color: #4d8aff; }
+    .case-result { color: #4d8aff; background: rgba(0,102,255,0.08); border-color: rgba(0,102,255,0.15); }
+    .case-card:hover { border-color: rgba(0,102,255,0.3); }
+    .section-title em { color: #4d8aff !important; }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">JA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">Sobre mí</a></li>
+        <li><a href="../index.html#services">Servicios</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Agenda una consulta</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="detail-hero">
+    <div class="detail-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+    </div>
+    <div class="container">
+      <a href="../index.html#services" class="detail-back reveal">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Volver a servicios
+      </a>
+      <div class="detail-icon-large reveal">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 5l-10 17.5h8.5v12.5l11.5-17.5h-8.5L20 5z" fill="#4d8aff" stroke="#4d8aff" stroke-width="0.5" stroke-linejoin="round"/></svg>
+      </div>
+      <h1 class="detail-title reveal">Power <span>Automate</span></h1>
+      <p class="detail-subtitle reveal">
+        Automatizo los procesos repetitivos de tu empresa para que tu equipo invierta su tiempo en lo que realmente importa.
+      </p>
+    </div>
+  </section>
+
+  <section class="detail-cases">
+    <div class="container">
+      <div class="section-tag reveal" style="color: #4d8aff;">Casos prácticos</div>
+      <h2 class="section-title reveal" style="margin-bottom: 3rem;">
+        ¿Qué procesos puedes<br /><em>automatizar</em>?
+      </h2>
+      <div class="cases-grid">
+
+        <div class="case-card reveal">
+          <div class="case-number">01 · Aprobaciones</div>
+          <h3 class="case-title">Flujo de aprobación de presupuestos</h3>
+          <p class="case-desc">Cuando un comercial crea un presupuesto superior a cierto importe, se lanza automáticamente una solicitud de aprobación al responsable por Teams o email. Aprueba en un clic. Sin reuniones, sin esperas.</p>
+          <span class="case-result">De días a minutos en aprobar</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">02 · RRHH</div>
+          <h3 class="case-title">Gestión automática de vacaciones</h3>
+          <p class="case-desc">El empleado solicita vacaciones en un formulario o Teams. El flujo notifica al responsable, registra la aprobación en SharePoint/Dataverse y actualiza el calendario del equipo. Sin hojas de Excel compartidas.</p>
+          <span class="case-result">Proceso 100% sin papel</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">03 · Administración</div>
+          <h3 class="case-title">Alta automática de clientes en CRM</h3>
+          <p class="case-desc">Cuando se recibe una solicitud por web, email o formulario, se crea automáticamente el contacto en Dynamics 365 o Business Central, se asigna al comercial correspondiente y se envía un email de bienvenida.</p>
+          <span class="case-result">Cero tareas manuales en el alta</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">04 · Facturación</div>
+          <h3 class="case-title">Procesamiento de facturas recibidas</h3>
+          <p class="case-desc">Las facturas que llegan por email son procesadas con AI Builder: extrae datos clave, los registra en el ERP y notifica al equipo contable. La factura se archiva en SharePoint etiquetada automáticamente.</p>
+          <span class="case-result">↓ 80% tiempo en entrada de datos</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">05 · Comunicación</div>
+          <h3 class="case-title">Alertas y notificaciones inteligentes</h3>
+          <p class="case-desc">Alertas automáticas cuando un cliente lleva X días sin actividad, cuando una oferta está próxima a vencer o cuando el stock cae por debajo del mínimo. Recibe la información donde la necesitas: Teams, email o móvil.</p>
+          <span class="case-result">Nunca más perder una oportunidad</span>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-number">06 · Reportes</div>
+          <h3 class="case-title">Informes automáticos periódicos</h3>
+          <p class="case-desc">Generación y envío automático de informes semanales o mensuales a dirección: resumen de ventas, incidencias abiertas o estado de proyectos. Directamente en email, sin intervención humana.</p>
+          <span class="case-result">Informes en piloto automático</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-cta">
+    <div class="container">
+      <div class="detail-cta-inner">
+        <div class="contact-bg-glow"></div>
+        <div class="section-tag reveal" style="justify-content:center;color:#4d8aff;">Siguiente paso</div>
+        <h2 class="contact-title reveal">¿Cuántas horas<br />pierde tu equipo en<br /><em>tareas manuales</em>?</h2>
+        <p class="contact-desc reveal">Agenda una consulta gratuita y calculamos juntos cuántos procesos de tu empresa se pueden automatizar esta semana.</p>
+        <div class="contact-actions reveal">
+          <a href="https://calendly.com/jesusalonsopp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h14" stroke="currentColor" stroke-width="1.5"/><path d="M7 2v4M13 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Agenda tu consulta</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
