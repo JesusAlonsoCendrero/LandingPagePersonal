@@ -1068,7 +1068,6 @@ body:has(a:hover) .cursor-trail { width: 48px; height: 48px; border-color: rgba(
 
   .hero-title { font-size: clamp(2.2rem, 9vw, 3.2rem); }
   .hero-subtitle { font-size: 1rem; max-width: 100%; }
-  .hero-subtitle br { display: none; }
   .hero-content { overflow: hidden; width: 100%; }
   .services-grid { grid-template-columns: 1fr; }
   .cases-grid { grid-template-columns: 1fr; }
