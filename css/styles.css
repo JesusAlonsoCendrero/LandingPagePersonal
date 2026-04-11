@@ -607,17 +607,7 @@ body:has(a:hover) .cursor-trail { width: 48px; height: 48px; border-color: rgba(
   letter-spacing: -0.05em;
 }
 
-.portrait-accent {
-  position: absolute;
-  bottom: -12px;
-  right: -12px;
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
-  border: 2px solid var(--cyan);
-  opacity: 0.4;
-  pointer-events: none;
-}
+.portrait-accent { display: none; }
 
 .about-lead {
   font-size: 1.2rem;
@@ -1076,13 +1066,19 @@ body:has(a:hover) .cursor-trail { width: 48px; height: 48px; border-color: rgba(
   .nav-links.open { display: flex; }
   .nav-toggle { display: flex; z-index: 101; }
 
-  .hero-title { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+  .hero-title { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+  .hero-subtitle { font-size: 1rem; max-width: 100%; }
+  .hero-subtitle br { display: none; }
+  .hero-content { overflow: hidden; width: 100%; }
   .services-grid { grid-template-columns: 1fr; }
   .cases-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
 
-  .contact-title { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+  .contact-title { font-size: clamp(1.35rem, 6vw, 1.9rem); }
+  .contact-title br { display: none; }
   .contact-inner { padding: 3rem 1.25rem; }
+  .btn-large { font-size: 0.95rem; padding: 0.9rem 1.5rem; white-space: normal; text-align: center; }
+  .contact-actions .btn { max-width: 100%; width: 100%; justify-content: center; }
 
   .detail-cta .contact-title { font-size: clamp(1.4rem, 6vw, 1.9rem); }
   .detail-cta-inner { padding: 2.5rem 1.25rem; }
