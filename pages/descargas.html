@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descargas — Jesús Alonso</title>
+  <meta name="description" content="Plantillas y código fuente de proyectos Power Platform listos para descargar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">JA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">Sobre mí</a></li>
+        <li><a href="../index.html#services">Servicios</a></li>
+        <!-- <li><a href="../index.html#portfolio">Proyectos</a></li> · oculto -->
+        <li><a href="../index.html#contact" class="nav-cta">Hablemos</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="detail-hero">
+    <div class="detail-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+    </div>
+    <div class="container">
+      <a href="../index.html" class="detail-back reveal">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Volver al inicio
+      </a>
+      <div class="detail-icon-large reveal" style="background:rgba(0,180,216,0.1);border:1px solid rgba(0,180,216,0.25);">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#00b4d8" stroke-width="2"><path d="M20 5v22M11 18l9 9 9-9M6 33h28" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h1 class="detail-title reveal">Recursos <span style="color:#00b4d8;">descargables</span></h1>
+      <p class="detail-subtitle reveal">
+        Plantillas y código fuente de proyectos Power Platform que voy publicando en LinkedIn. Disponibles gratis a cambio de tu email — los uso también para mandarte ocasionalmente novedades útiles.
+      </p>
+    </div>
+  </section>
+
+  <section class="detail-cases">
+    <div class="container">
+      <div class="section-tag reveal" style="color:#00b4d8;">Disponibles</div>
+      <h2 class="section-title reveal" style="margin-bottom: 3rem;">
+        Plantillas <em>listas para descargar</em>
+      </h2>
+
+      <div class="downloads-grid">
+
+        <!-- App Porra Mundial -->
+        <a href="descargas/porra-mundial.html" class="download-card reveal">
+          <div class="download-card-media">
+            <div class="download-card-icon" style="--icon-color:#742774;">
+              <img src="../img/PowerappsLogo.svg.png" alt="Power Apps" />
+            </div>
+            <span class="download-card-tech">Power Apps</span>
+          </div>
+          <div class="download-card-body">
+            <h3>App Porra Mundial</h3>
+            <p>Código fuente de la app para organizar la porra del Mundial entre amigos o equipo. Pronósticos, ranking y puntuación automática.</p>
+            <span class="download-card-cta">Ver y descargar <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+
+        <!--
+        ===================================================================
+        PLANTILLA NUEVO RECURSO DESCARGABLE
+        Duplica el bloque de la Porra Mundial y modifica:
+          - href → descargas/[slug-del-recurso].html
+          - icono y tecnología
+          - título y descripción
+        Crea también el archivo descargas/[slug].html copiando porra-mundial.html
+        y cambia el slug en <meta name="recurso-slug"> y en <body data-recurso-slug>
+        Inserta una fila en la tabla `recursos` de Supabase con el mismo slug.
+        ===================================================================
+        -->
+
+        <!-- Próximamente placeholder -->
+        <div class="download-card download-card-empty reveal">
+          <div class="download-card-media">
+            <div class="download-card-icon" style="--icon-color:#6b7f99;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="download-card-tech">Próximamente</span>
+          </div>
+          <div class="download-card-body">
+            <h3>Más recursos en camino</h3>
+            <p>Voy publicando nuevas plantillas en LinkedIn. Sígueme para no perderte ninguna.</p>
+            <a href="https://www.linkedin.com/in/jesús-alonso-cendrero-a68b97226" target="_blank" rel="noopener noreferrer" class="download-card-cta">Seguir en LinkedIn <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;text-align:center;">
+        <p>© 2026 Jesús Alonso. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

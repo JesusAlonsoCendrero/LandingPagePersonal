@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmando descarga — Jesús Alonso</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="../../index.html" class="nav-logo">JA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../../index.html#about">Sobre mí</a></li>
+        <li><a href="../../index.html#services">Servicios</a></li>
+        <!-- <li><a href="../../index.html#portfolio">Proyectos</a></li> · oculto -->
+        <li><a href="../../index.html#contact" class="nav-cta">Hablemos</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="download-hero" style="padding-bottom:8rem;">
+    <div class="detail-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+    </div>
+
+    <div class="container" style="max-width:640px;">
+      <div class="download-form-card" style="text-align:center;">
+
+        <!-- Estado: cargando -->
+        <div class="download-step" id="stateLoading">
+          <div class="download-success-icon spin" style="color:var(--cyan);background:transparent;border-color:transparent;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="9" stroke-dasharray="40 60" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h2>Confirmando descarga...</h2>
+          <p>Validando tu enlace. Tardamos solo un instante.</p>
+        </div>
+
+        <!-- Estado: éxito -->
+        <div class="download-step" id="stateSuccess" hidden>
+          <div class="download-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 id="successTitle">¡Listo!</h2>
+          <p>Tu descarga está preparada. El enlace caduca en <strong>1 hora</strong>.</p>
+          <a id="downloadLink" href="#" class="btn btn-primary btn-large" style="margin-top:1rem;display:inline-flex;">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 3v11M5 10l5 5 5-5M4 18h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Descargar archivo</span>
+          </a>
+          <p class="download-success-meta" style="margin-top:1.5rem;">
+            ¿Problemas con la descarga? <a href="../../index.html#contact" style="color:var(--cyan);">Contáctame</a>.
+          </p>
+        </div>
+
+        <!-- Estado: error -->
+        <div class="download-step" id="stateError" hidden>
+          <div class="download-error-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01" stroke-linecap="round"/></svg>
+          </div>
+          <h2>No hemos podido confirmar la descarga</h2>
+          <p id="errorMsg">El enlace no es válido o ha caducado.</p>
+          <a href="../descargas.html" class="btn btn-ghost" style="margin-top:1rem;display:inline-flex;">
+            Volver a descargas
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;text-align:center;">
+        <p>© 2026 Jesús Alonso. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/supabase-config.js"></script>
+  <script src="../../js/confirmar.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

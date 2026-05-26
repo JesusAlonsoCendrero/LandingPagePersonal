@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descargar App Porra Mundial — Jesús Alonso</title>
+  <meta name="description" content="Descarga gratis el código de la App de la Porra Mundial en Power Apps. Solo necesitas tu email." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+
+  <!--
+    =====================================================================
+    METADATOS DEL RECURSO
+    Cuando integremos Supabase, este slug se usará para identificar el
+    recurso en la tabla `recursos` y para buscar el archivo en Storage.
+    =====================================================================
+  -->
+  <meta name="recurso-slug" content="porra-mundial" />
+</head>
+<body data-recurso-slug="porra-mundial">
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="../../index.html" class="nav-logo">JA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../../index.html#about">Sobre mí</a></li>
+        <li><a href="../../index.html#services">Servicios</a></li>
+        <!-- <li><a href="../../index.html#portfolio">Proyectos</a></li> · oculto -->
+        <li><a href="../../index.html#contact" class="nav-cta">Hablemos</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="download-hero">
+    <div class="detail-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+    </div>
+
+    <div class="container">
+      <a href="../descargas.html" class="detail-back reveal">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Volver a descargas
+      </a>
+
+      <div class="download-grid">
+
+        <!-- COLUMNA IZQUIERDA: descripción del recurso -->
+        <div class="download-info">
+          <div class="download-badge reveal">
+            <img src="../../img/PowerappsLogo.svg.png" alt="Power Apps" />
+            <span>Power Apps · Código gratuito</span>
+          </div>
+
+          <h1 class="download-title reveal">
+            App Porra <em>Mundial</em>
+          </h1>
+
+          <p class="download-lead reveal">
+            El código fuente de la app de Power Apps para organizar la porra del Mundial entre tus amigos o equipo. Pronósticos, ranking automático, puntuación y todo gestionado desde el móvil.
+          </p>
+
+          <ul class="download-features reveal">
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Código fuente <strong>importable</strong> en Power Apps (archivo .rar — necesitas WinRAR o 7-Zip)</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Sistema de pronósticos y puntuación automática</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Ranking de participantes en tiempo real</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Libre para personalizar y usar como base de tus propios proyectos</span>
+            </li>
+          </ul>
+
+          <div class="download-preview reveal">
+            <div class="carousel" data-autoplay="4500" aria-roledescription="carrusel">
+              <div class="carousel-viewport">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva1.JPG"  alt="App Porra Mundial — Pantalla 1"  loading="eager" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva2.JPG"  alt="App Porra Mundial — Pantalla 2"  loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva3.JPG"  alt="App Porra Mundial — Pantalla 3"  loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva4.JPG"  alt="App Porra Mundial — Pantalla 4"  loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva5.JPG"  alt="App Porra Mundial — Pantalla 5"  loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva6.JPG"  alt="App Porra Mundial — Pantalla 6"  loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva7.JPG"  alt="App Porra Mundial — Pantalla 7"  loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva8.JPG"  alt="App Porra Mundial — Pantalla 8"  loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva9.JPG"  alt="App Porra Mundial — Pantalla 9"  loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva10.JPG" alt="App Porra Mundial — Pantalla 10" loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva11.JPG" alt="App Porra Mundial — Pantalla 11" loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva12.JPG" alt="App Porra Mundial — Pantalla 12" loading="lazy" /></div>
+                </div>
+              </div>
+
+              <button class="carousel-arrow carousel-prev" type="button" aria-label="Anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="carousel-arrow carousel-next" type="button" aria-label="Siguiente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+
+              <div class="carousel-counter">1 / 12</div>
+              <div class="carousel-zoom-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6" stroke-linecap="round"/></svg>
+                <span>Click para ampliar</span>
+              </div>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: form de descarga -->
+        <div class="download-form-wrap">
+          <div class="download-form-card reveal">
+
+            <!-- Estado inicial: formulario -->
+            <div class="download-step" id="stepForm">
+              <div class="download-form-head">
+                <div class="section-tag" style="color:#00b4d8;margin-bottom:0.5rem;">Descarga gratis</div>
+                <h2>Recibe el enlace en tu email</h2>
+                <p>Te enviamos un correo de confirmación. Al hacer clic recibes el enlace de descarga.</p>
+              </div>
+
+              <form class="download-form" id="downloadForm" novalidate>
+                <label class="form-field">
+                  <span class="form-label">Email</span>
+                  <input type="email" name="email" id="downloadEmail" required autocomplete="email" placeholder="tu@email.com" />
+                </label>
+
+                <label class="form-field">
+                  <span class="form-label">Nombre <span class="form-optional">(opcional)</span></span>
+                  <input type="text" name="nombre" autocomplete="given-name" placeholder="Cómo te llamas" />
+                </label>
+
+                <label class="check-field">
+                  <input type="checkbox" name="consentComercial" id="consentComercial" required />
+                  <span class="check-box" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 8l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span class="check-label">
+                    Acepto recibir <strong>comunicaciones comerciales</strong> ocasionales con nuevas plantillas, tips de Power Platform y novedades. Puedo darme de baja en cualquier momento.
+                  </span>
+                </label>
+
+                <p class="form-legal">
+                  Al enviar aceptas la <a href="#" target="_blank" rel="noopener">política de privacidad</a>. Tus datos se almacenan de forma segura y no se comparten con terceros.
+                </p>
+
+                <button type="submit" class="btn btn-primary btn-large form-submit" id="downloadSubmit">
+                  <span>Enviarme el enlace</span>
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M3 10h12M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </form>
+            </div>
+
+            <!-- Estado éxito: revisar email -->
+            <div class="download-step" id="stepSuccess" hidden>
+              <div class="download-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h2>Revisa tu bandeja de entrada</h2>
+              <p>
+                Te he enviado un email a <strong id="successEmail"></strong> con el enlace de descarga.
+                Si no lo ves en unos minutos revisa la carpeta de spam.
+              </p>
+              <p class="download-success-meta">
+                ¿No te ha llegado? <button type="button" class="link-btn" id="resendBtn">Reenviar</button>
+              </p>
+            </div>
+
+            <!-- Estado error -->
+            <div class="download-step" id="stepError" hidden>
+              <div class="download-error-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01" stroke-linecap="round"/></svg>
+              </div>
+              <h2>Algo ha fallado</h2>
+              <p id="errorMsg">No hemos podido procesar tu solicitud. Inténtalo de nuevo en unos segundos.</p>
+              <button type="button" class="btn btn-ghost" id="retryBtn">Volver al formulario</button>
+            </div>
+
+          </div>
+
+          <div class="download-meta reveal">
+            <div class="meta-row">
+              <span class="meta-key">Formato</span>
+              <span class="meta-val">.rar · 47 MB</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-key">Última actualización</span>
+              <span class="meta-val">Mayo 2026</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-key">Compatibilidad</span>
+              <span class="meta-val">Power Apps</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;text-align:center;">
+        <p>© 2026 Jesús Alonso. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+  ===========================================================================
+  TODO: INTEGRACIÓN CON SUPABASE
+  ---------------------------------------------------------------------------
+  Esquema esperado (crear en Supabase SQL editor):
+
+    create table recursos (
+      id uuid primary key default gen_random_uuid(),
+      slug text unique not null,
+      nombre text not null,
+      descripcion text,
+      tecnologia text,
+      storage_path text not null,            -- ruta en bucket 'recursos'
+      activo boolean default true,
+      created_at timestamptz default now()
+    );
+
+    create table descargas (
+      id uuid primary key default gen_random_uuid(),
+      recurso_slug text not null references recursos(slug),
+      email text not null,
+      nombre text,
+      consent_comercial boolean not null,
+      consent_fecha timestamptz default now(),
+      consent_ip text,
+      consent_user_agent text,
+      token_confirmacion text unique,
+      confirmado boolean default false,
+      fecha_confirmacion timestamptz,
+      fecha_descarga timestamptz
+    );
+
+    create index on descargas(email);
+    create index on descargas(token_confirmacion);
+
+  Flujo:
+   1) Submit del form → POST a Supabase Edge Function 'request-download'
+      - inserta fila en `descargas` con token aleatorio (crypto.randomUUID())
+      - envía email vía Resend/Postmark con enlace:
+        https://tu-dominio/pages/descargas/confirmar.html?token=XXX
+   2) Página confirmar.html → POST a Edge Function 'confirm-download'
+      - valida token, marca confirmado=true
+      - devuelve signed URL del archivo en bucket 'recursos' (caduca en 1h)
+      - registra fecha_descarga
+   3) Frontend dispara la descarga.
+  ===========================================================================
+  -->
+
+  <!-- LIGHTBOX con galería navegable -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Siguiente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
+  <script src="../../js/supabase-config.js"></script>
+  <script src="../../js/descargas.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

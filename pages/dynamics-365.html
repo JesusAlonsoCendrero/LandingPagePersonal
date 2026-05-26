@@ -35,7 +35,8 @@
       <ul class="nav-links">
         <li><a href="../index.html#about">Sobre mí</a></li>
         <li><a href="../index.html#services">Servicios</a></li>
-        <li><a href="../index.html#contact" class="nav-cta">Agenda una consulta</a></li>
+        <!-- <li><a href="../index.html#portfolio">Proyectos</a></li> · oculto -->
+        <li><a href="../index.html#contact" class="nav-cta">Hablemos</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
     </div>
@@ -115,17 +116,77 @@
     </div>
   </section>
 
+  <!-- ============================================================
+       PROYECTOS REALIZADOS
+       ============================================================ -->
+  <!-- "Proyectos realizados" oculto hasta tener proyectos publicados.
+       Para reactivar: quitar el atributo hidden de la línea siguiente. -->
+  <section class="detail-projects" id="proyectos" hidden>
+    <div class="container">
+      <div class="detail-projects-header">
+        <div class="section-tag reveal" style="color:#00b4d8;">Proyectos realizados</div>
+        <h2 class="section-title reveal">
+          Proyectos en <em style="color:#00b4d8">Dynamics 365 & BC</em>
+        </h2>
+        <p class="section-desc reveal" style="margin-top:1.25rem;">
+          Extensiones, integraciones y mejoras hechas sobre Dynamics 365 y Business Central. Se publicarán con capturas y notas técnicas.
+        </p>
+      </div>
+
+      <article class="project-block reveal" id="proyecto-ejemplo">
+        <div class="project-head">
+          <div class="project-head-left">
+            <div class="project-meta" style="color:#00b4d8;">
+              <span class="meta-dot"></span>
+              <span>Proyecto · Próximamente</span>
+            </div>
+            <h3 class="project-title">Extensión Business Central</h3>
+            <p class="project-summary">
+              Personalización de Business Central para adaptar el flujo de ventas a la operativa real: nuevos campos, validaciones, automatismos y reporting integrado.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Business Central</span>
+            <span class="project-tag">AL</span>
+            <span class="project-tag">Integraciones</span>
+          </div>
+        </div>
+
+        <div class="project-gallery">
+          <div class="media-item media-large" data-media-type="placeholder">
+            <div class="media-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 14h4" stroke-linecap="round"/></svg>
+              <span>Vista de la extensión</span>
+            </div>
+          </div>
+          <div class="media-item" data-media-type="placeholder">
+            <div class="media-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="6,4 20,12 6,20" fill="currentColor"/></svg>
+              <span>Vídeo demo</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!--
+      ===================================================================
+      PLANTILLA NUEVO PROYECTO DYNAMICS / BC
+      Copia la estructura del bloque visible y rellena los datos.
+      =================================================================== -->
+    </div>
+  </section>
+
   <section class="detail-cta">
     <div class="container">
       <div class="detail-cta-inner">
         <div class="contact-bg-glow"></div>
         <div class="section-tag reveal" style="justify-content:center;color:#00b4d8;">Siguiente paso</div>
         <h2 class="contact-title reveal">¿Tu ERP o CRM no se <br />adapta del todo a tu <br /><em>forma de trabajar</em>?</h2>
-        <p class="contact-desc reveal">Agenda una consulta y analizamos qué extensiones o integraciones necesitas para que tus herramientas trabajen para ti.</p>
+        <p class="contact-desc reveal">Cuéntame qué te falta y vemos qué extensión o integración resuelve el problema sin trastocar tu operativa.</p>
         <div class="contact-actions reveal">
-          <a href="https://calendly.com/jesusalonsopp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h14" stroke="currentColor" stroke-width="1.5"/><path d="M7 2v4M13 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            <span>Agenda tu consulta</span>
+          <a href="../index.html#contact" class="btn btn-primary btn-large">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10l16-7-7 16-2-7-7-2z" stroke-linejoin="round"/></svg>
+            <span>Contáctame</span>
           </a>
         </div>
       </div>

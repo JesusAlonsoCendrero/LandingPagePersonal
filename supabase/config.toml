@@ -1,0 +1,19 @@
+# Supabase project config
+# Más info: https://supabase.com/docs/guides/cli/config
+
+project_id = "yrehhqzteiqwnejedwrg"
+
+# ====================================================================
+# Edge Functions
+# verify_jwt = false → la función NO valida el header Authorization
+# como JWT. La usamos así porque request-download y confirm-download
+# son endpoints públicos del formulario y validan por su cuenta:
+#   - request-download: valida payload (email, slug, consent)
+#   - confirm-download: valida el token de descarga
+# ====================================================================
+
+[functions.request-download]
+verify_jwt = false
+
+[functions.confirm-download]
+verify_jwt = false
