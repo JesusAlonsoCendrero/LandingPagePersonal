@@ -306,49 +306,111 @@ document.querySelectorAll('.carousel').forEach(carousel => {
   startAuto();
 });
 
-// ----------- CONTACT FORM (UX feedback + Turnstile + dynamic _next) -----------
+// ----------- CONTACT FORM (Web3Forms + Supabase en paralelo) -----------
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  // 1) Rellenar _next dinámicamente con la URL actual + ?sent=1
-  //    Así funciona en local (127.0.0.1) y en producción sin hardcodear dominio.
-  const nextInput = contactForm.querySelector('input[name="_next"]');
-  if (nextInput) {
-    const url = new URL(window.location.href);
-    url.search = '';
-    url.hash   = '';
-    url.searchParams.set('sent', '1');
-    nextInput.value = url.toString();
+  // INSERT en Supabase (fire-and-forget: si falla, el email a Web3Forms sigue llegando)
+  async function logToSupabase(formData) {
+    const cfg = window.SUPABASE_CONFIG;
+    if (!cfg || !cfg.url || !cfg.anonKey) return;
+    try {
+      await fetch(`${cfg.url}/rest/v1/contact_messages`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': cfg.anonKey,
+          'Authorization': `Bearer ${cfg.anonKey}`,
+          'Prefer': 'return=minimal',
+        },
+        body: JSON.stringify({
+          nombre:     formData.get('nombre') || '',
+          email:      formData.get('email')  || '',
+          empresa:    formData.get('empresa') || null,
+          tipo:       formData.get('tipo')    || '',
+          mensaje:    formData.get('mensaje') || '',
+          user_agent: navigator.userAgent.slice(0, 500),
+        }),
+      });
+    } catch (err) {
+      console.warn('[supabase contact_messages] insert falló:', err);
+    }
   }
 
-  contactForm.addEventListener('submit', e => {
-    // 2) Validar token de Cloudflare Turnstile (si está cargado)
-    const turnstileInput = contactForm.querySelector('input[name="cf-turnstile-response"]');
-    const token = turnstileInput ? turnstileInput.value : '';
-    if (typeof turnstile !== 'undefined' && !token) {
-      e.preventDefault();
-      const widget = contactForm.querySelector('.cf-turnstile');
-      if (widget) {
-        widget.classList.add('shake');
-        setTimeout(() => widget.classList.remove('shake'), 500);
-      }
-      return;
-    }
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
 
-    // 3) Feedback visual del botón
+    // Feedback visual del botón
     const submitBtn = contactForm.querySelector('button[type="submit"]');
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      const span = submitBtn.querySelector('span');
-      if (span) span.textContent = 'Enviando...';
+    const submitSpan = submitBtn ? submitBtn.querySelector('span') : null;
+    const originalLabel = submitSpan ? submitSpan.textContent : '';
+    if (submitBtn) submitBtn.disabled = true;
+    if (submitSpan) submitSpan.textContent = 'Enviando...';
+
+    const formData = new FormData(contactForm);
+
+    // Lanzamos el INSERT en Supabase en paralelo (no bloquea ni rompe el flujo)
+    logToSupabase(formData);
+
+    // Envío AJAX a Web3Forms (este sí determina el éxito que ve el usuario)
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' }
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.success) {
+        // Limpiamos cualquier error previo
+        const prevErr = contactForm.querySelector('.form-error');
+        if (prevErr) prevErr.remove();
+
+        // Restablecemos el form para la próxima vez (oculto, pero listo)
+        contactForm.reset();
+        contactForm.style.display = 'none';
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitSpan) submitSpan.textContent = originalLabel || 'Enviar mensaje';
+
+        // Reutilizamos un mensaje de éxito si ya existe (por reenvíos)
+        let note = contactForm.parentNode.querySelector('.form-success');
+        if (!note) {
+          note = document.createElement('div');
+          note.className = 'form-success';
+          contactForm.parentNode.insertBefore(note, contactForm);
+        }
+        note.innerHTML = `
+          <div class="form-success-text">
+            <strong>¡Mensaje enviado!</strong> Te respondo en menos de 24 horas.
+          </div>
+          <button type="button" class="form-success-action">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M2 10l16-7-7 16-2-7-7-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            <span>Enviar otro mensaje</span>
+          </button>
+        `;
+        note.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        note.querySelector('.form-success-action').addEventListener('click', () => {
+          note.remove();
+          contactForm.style.display = '';
+          const firstInput = contactForm.querySelector('input[name="nombre"]');
+          if (firstInput) firstInput.focus({ preventScroll: true });
+          contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      } else {
+        throw new Error(data.message || 'Error al enviar');
+      }
+    } catch (err) {
+      if (submitBtn) submitBtn.disabled = false;
+      if (submitSpan) submitSpan.textContent = originalLabel || 'Enviar mensaje';
+      let errBox = contactForm.querySelector('.form-error');
+      if (!errBox) {
+        errBox = document.createElement('div');
+        errBox.className = 'form-error';
+        contactForm.insertBefore(errBox, submitBtn);
+      }
+      errBox.textContent = 'No se pudo enviar el mensaje. Inténtalo de nuevo o escríbeme directamente a jesusalonsocendrero@gmail.com.';
     }
   });
-
-  // 4) Mensaje de confirmación si la URL trae ?sent=1
-  if (new URLSearchParams(window.location.search).get('sent') === '1') {
-    const note = document.createElement('div');
-    note.className = 'form-success';
-    note.innerHTML = '<strong>¡Mensaje enviado!</strong> Te respondo en menos de 24 horas.';
-    contactForm.parentNode.insertBefore(note, contactForm);
-    note.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
 }

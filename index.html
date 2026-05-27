@@ -9,9 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Cloudflare Turnstile (captcha invisible/managed) -->
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
@@ -517,17 +514,15 @@
           <form
             class="contact-form reveal"
             id="contactForm"
-            action="https://formsubmit.co/jesusalonsocendrero@gmail.com"
+            action="https://api.web3forms.com/submit"
             method="POST"
           >
-            <!-- FormSubmit config -->
-            <input type="hidden" name="_subject" value="Nuevo contacto desde la web 🚀" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <!-- _next se rellena dinámicamente en main.js con la URL actual + ?sent=1 -->
-            <input type="hidden" name="_next" value="" />
-            <!-- honeypot anti-spam -->
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <!-- Web3Forms config — reemplaza TU_ACCESS_KEY_AQUI por la clave de https://web3forms.com -->
+            <input type="hidden" name="access_key" value="61f835bf-13fa-4c9d-9ea6-0b185073016d" />
+            <input type="hidden" name="subject" value="Nuevo contacto desde la web 🚀" />
+            <input type="hidden" name="from_name" value="Web jesusalonso.dev" />
+            <!-- honeypot anti-spam (Web3Forms reconoce 'botcheck') -->
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
 
             <div class="form-row">
               <label class="form-field">
@@ -563,22 +558,6 @@
               <span class="form-label">Mensaje</span>
               <textarea name="mensaje" rows="5" required placeholder="Cuéntame brevemente qué necesitas..."></textarea>
             </label>
-
-            <!-- Cloudflare Turnstile (anti-spam invisible/managed)
-                 ───────────────────────────────────────────────────────────
-                 La sitekey actual es la de PRUEBA de Cloudflare (siempre pasa).
-                 Para producción:
-                   1) Ve a https://dash.cloudflare.com → Turnstile → Add site
-                   2) Domain: tu dominio (ej. jesusalonso.dev). Para localhost
-                      puedes seguir usando esta sitekey de prueba.
-                   3) Widget mode: Managed (recomendado)
-                   4) Copia la "Site Key" y sustitúyela abajo.
-                 La "Secret Key" NO se usa aquí (la validación es solo cliente).
-            -->
-            <div class="cf-turnstile turnstile-widget"
-                 data-sitekey="0x4AAAAAADW06Ls5CfQFj4QX"
-                 data-theme="dark"
-                 data-size="flexible"></div>
 
             <button type="submit" class="btn btn-primary btn-large form-submit">
               <span>Enviar mensaje</span>
@@ -646,6 +625,7 @@
     <div class="lightbox-content" id="lightboxContent"></div>
   </div>
 
+  <script src="js/supabase-config.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
