@@ -309,6 +309,46 @@ document.querySelectorAll('.carousel').forEach(carousel => {
 // ----------- CONTACT FORM (Web3Forms + Supabase en paralelo) -----------
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+  // Rellenar el campo 'redirect' (fallback de Web3Forms) con la URL actual + ?sent=1
+  // Solo se usa si el JS no se ejecuta (cache obsoleto, JS desactivado, etc.).
+  // Con el handler de submit AJAX funcionando, este valor se ignora.
+  const redirectInput = contactForm.querySelector('input[name="redirect"]');
+  if (redirectInput) {
+    const url = new URL(window.location.href);
+    url.search = '';
+    url.hash = '';
+    url.searchParams.set('sent', '1');
+    redirectInput.value = url.toString();
+  }
+
+  // Si el usuario llegó con ?sent=1 (fallback redirect), mostramos el éxito y limpiamos URL
+  if (new URLSearchParams(window.location.search).get('sent') === '1') {
+    const note = document.createElement('div');
+    note.className = 'form-success';
+    note.innerHTML = `
+      <div class="form-success-text">
+        <strong>¡Mensaje enviado!</strong> Te respondo en menos de 24 horas.
+      </div>
+      <button type="button" class="form-success-action">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M2 10l16-7-7 16-2-7-7-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <span>Enviar otro mensaje</span>
+      </button>
+    `;
+    contactForm.style.display = 'none';
+    contactForm.parentNode.insertBefore(note, contactForm);
+    note.querySelector('.form-success-action').addEventListener('click', () => {
+      note.remove();
+      contactForm.style.display = '';
+      contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    // Limpiamos el query param de la URL sin recargar
+    const cleanUrl = new URL(window.location.href);
+    cleanUrl.searchParams.delete('sent');
+    history.replaceState(null, '', cleanUrl.toString());
+  }
+
   // INSERT en Supabase (fire-and-forget: si falla, el email a Web3Forms sigue llegando)
   async function logToSupabase(formData) {
     const cfg = window.SUPABASE_CONFIG;

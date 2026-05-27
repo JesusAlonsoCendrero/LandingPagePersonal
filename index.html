@@ -517,10 +517,12 @@
             action="https://api.web3forms.com/submit"
             method="POST"
           >
-            <!-- Web3Forms config — reemplaza TU_ACCESS_KEY_AQUI por la clave de https://web3forms.com -->
+            <!-- Web3Forms config -->
             <input type="hidden" name="access_key" value="61f835bf-13fa-4c9d-9ea6-0b185073016d" />
             <input type="hidden" name="subject" value="Nuevo contacto desde la web 🚀" />
             <input type="hidden" name="from_name" value="Web jesusalonso.dev" />
+            <!-- Fallback: si el JS no carga, Web3Forms te devuelve a tu propia web (no a su pantalla genérica). main.js rellena el value dinámicamente. -->
+            <input type="hidden" name="redirect" value="" />
             <!-- honeypot anti-spam (Web3Forms reconoce 'botcheck') -->
             <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
 
@@ -625,7 +627,7 @@
     <div class="lightbox-content" id="lightboxContent"></div>
   </div>
 
-  <script src="js/supabase-config.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/supabase-config.js?v=20260527"></script>
+  <script src="js/main.js?v=20260527"></script>
 </body>
 </html>
