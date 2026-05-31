@@ -3,23 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Descargar App Porra Mundial — Jesús Alonso</title>
-  <meta name="description" content="Descarga gratis el código de la App de la Porra Mundial en Power Apps. Solo necesitas tu email." />
+  <title>Descargar Dashboard Power BI Marketing Digital — Jesús Alonso</title>
+  <meta name="description" content="Descarga gratis el dashboard de Power BI para Marketing Digital. KPIs, conversiones, ROAS y rendimiento por canal. Solo necesitas tu email." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="../../css/styles.css?v=20260529" />
 
-  <!--
-    =====================================================================
-    METADATOS DEL RECURSO
-    Cuando integremos Supabase, este slug se usará para identificar el
-    recurso en la tabla `recursos` y para buscar el archivo en Storage.
-    =====================================================================
-  -->
-  <meta name="recurso-slug" content="porra-mundial" />
+  <meta name="recurso-slug" content="marketing-digital-powerbi" />
 </head>
-<body data-recurso-slug="porra-mundial">
+<body data-recurso-slug="marketing-digital-powerbi">
   <div class="cursor" id="cursor"></div>
   <div class="cursor-trail" id="cursorTrail"></div>
 
@@ -29,7 +22,6 @@
       <ul class="nav-links">
         <li><a href="../../index.html#about">Sobre mí</a></li>
         <li><a href="../../index.html#services">Servicios</a></li>
-        <!-- <li><a href="../../index.html#portfolio">Proyectos</a></li> · oculto -->
         <li><a href="../../index.html#contact" class="nav-cta">Hablemos</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
@@ -53,34 +45,38 @@
         <!-- COLUMNA IZQUIERDA: descripción del recurso -->
         <div class="download-info">
           <div class="download-badge reveal">
-            <img src="../../img/PowerappsLogo.svg.png" alt="Power Apps" />
-            <span>Power Apps · Código gratuito</span>
+            <img src="../../img/Power bi.svg.png" alt="Power BI" />
+            <span>Power BI · Plantilla gratuita</span>
           </div>
 
           <h1 class="download-title reveal">
-            App Porra <em>Mundial</em>
+            Dashboard <em>Marketing Digital</em>
           </h1>
 
           <p class="download-lead reveal">
-            El código fuente de la app de Power Apps para organizar la porra del Mundial entre tus amigos o equipo. Pronósticos, ranking automático, puntuación y todo gestionado desde el móvil.
+            Plantilla de Power BI para monitorizar tus campañas de marketing digital en un solo sitio: KPIs clave, rendimiento por canal, conversiones y ROAS. Lista para conectar a tus fuentes y empezar a tomar decisiones con datos.
           </p>
 
           <ul class="download-features reveal">
             <li>
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>Código fuente <strong>importable</strong> en Power Apps (archivo .rar — necesitas WinRAR o 7-Zip)</span>
+              <span>Archivo <strong>.pbix</strong> editable con Power BI Desktop</span>
             </li>
             <li>
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>Sistema de pronósticos y puntuación automática</span>
+              <span>KPIs principales: inversión, conversiones, CPA, ROAS, CTR</span>
             </li>
             <li>
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>Ranking de participantes en tiempo real</span>
+              <span>Análisis por canal (Google Ads, Meta, orgánico, email…) y por campaña</span>
             </li>
             <li>
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>Libre para personalizar y usar como base de tus propios proyectos</span>
+              <span>Filtros interactivos por fecha, canal y objetivo</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Listo para conectar a tus propias fuentes de datos y personalizar</span>
             </li>
           </ul>
 
@@ -88,18 +84,8 @@
             <div class="carousel" data-autoplay="4500" aria-roledescription="carrusel">
               <div class="carousel-viewport">
                 <div class="carousel-track">
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva1.JPG"  alt="App Porra Mundial — Pantalla 1"  loading="eager" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva2.JPG"  alt="App Porra Mundial — Pantalla 2"  loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva3.JPG"  alt="App Porra Mundial — Pantalla 3"  loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva4.JPG"  alt="App Porra Mundial — Pantalla 4"  loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva5.JPG"  alt="App Porra Mundial — Pantalla 5"  loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva6.JPG"  alt="App Porra Mundial — Pantalla 6"  loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva7.JPG"  alt="App Porra Mundial — Pantalla 7"  loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva8.JPG"  alt="App Porra Mundial — Pantalla 8"  loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva9.JPG"  alt="App Porra Mundial — Pantalla 9"  loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva10.JPG" alt="App Porra Mundial — Pantalla 10" loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva11.JPG" alt="App Porra Mundial — Pantalla 11" loading="lazy" /></div>
-                  <div class="carousel-slide"><img src="../../img/proyectos/porra-mundial/Diapositiva12.JPG" alt="App Porra Mundial — Pantalla 12" loading="lazy" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/MKDigital/Overview.png" alt="Dashboard Marketing Digital — Overview" loading="eager" /></div>
+                  <div class="carousel-slide"><img src="../../img/proyectos/MKDigital/Audience.png" alt="Dashboard Marketing Digital — Audience" loading="lazy" /></div>
                 </div>
               </div>
 
@@ -110,7 +96,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
 
-              <div class="carousel-counter">1 / 12</div>
+              <div class="carousel-counter">1 / 2</div>
               <div class="carousel-zoom-hint">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6" stroke-linecap="round"/></svg>
                 <span>Click para ampliar</span>
@@ -199,7 +185,7 @@
           <div class="download-meta reveal">
             <div class="meta-row">
               <span class="meta-key">Formato</span>
-              <span class="meta-val">.rar · 47 MB</span>
+              <span class="meta-val">.pbix</span>
             </div>
             <div class="meta-row">
               <span class="meta-key">Última actualización</span>
@@ -207,7 +193,7 @@
             </div>
             <div class="meta-row">
               <span class="meta-key">Compatibilidad</span>
-              <span class="meta-val">Power Apps</span>
+              <span class="meta-val">Power BI Desktop</span>
             </div>
           </div>
         </div>
@@ -224,54 +210,6 @@
       </div>
     </div>
   </footer>
-
-  <!--
-  ===========================================================================
-  TODO: INTEGRACIÓN CON SUPABASE
-  ---------------------------------------------------------------------------
-  Esquema esperado (crear en Supabase SQL editor):
-
-    create table recursos (
-      id uuid primary key default gen_random_uuid(),
-      slug text unique not null,
-      nombre text not null,
-      descripcion text,
-      tecnologia text,
-      storage_path text not null,            -- ruta en bucket 'recursos'
-      activo boolean default true,
-      created_at timestamptz default now()
-    );
-
-    create table descargas (
-      id uuid primary key default gen_random_uuid(),
-      recurso_slug text not null references recursos(slug),
-      email text not null,
-      nombre text,
-      consent_comercial boolean not null,
-      consent_fecha timestamptz default now(),
-      consent_ip text,
-      consent_user_agent text,
-      token_confirmacion text unique,
-      confirmado boolean default false,
-      fecha_confirmacion timestamptz,
-      fecha_descarga timestamptz
-    );
-
-    create index on descargas(email);
-    create index on descargas(token_confirmacion);
-
-  Flujo:
-   1) Submit del form → POST a Supabase Edge Function 'request-download'
-      - inserta fila en `descargas` con token aleatorio (crypto.randomUUID())
-      - envía email vía Resend/Postmark con enlace:
-        https://tu-dominio/pages/descargas/confirmar.html?token=XXX
-   2) Página confirmar.html → POST a Edge Function 'confirm-download'
-      - valida token, marca confirmado=true
-      - devuelve signed URL del archivo en bucket 'recursos' (caduca en 1h)
-      - registra fecha_descarga
-   3) Frontend dispara la descarga.
-  ===========================================================================
-  -->
 
   <!-- LIGHTBOX con galería navegable -->
   <div class="lightbox" id="lightbox" aria-hidden="true">

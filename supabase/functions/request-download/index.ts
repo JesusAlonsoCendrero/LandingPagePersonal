@@ -23,6 +23,7 @@ interface Payload {
   recurso_slug: string;
   email: string;
   nombre?: string;
+  empresa: string;
   consent_comercial: boolean;
 }
 
@@ -55,16 +56,20 @@ Deno.serve(async (req) => {
   const email = (payload.email ?? '').trim().toLowerCase();
   const slug  = (payload.recurso_slug ?? '').trim();
   const nombre = (payload.nombre ?? '').trim() || null;
+  const empresa = (payload.empresa ?? '').trim();
   const consent = payload.consent_comercial === true;
 
-  if (!slug || !email || !consent) {
+  if (!slug || !email || !empresa || !consent) {
     return jsonResponse(
-      { error: 'Faltan campos obligatorios (email, recurso_slug, consent_comercial).' },
+      { error: 'Faltan campos obligatorios (email, empresa, recurso_slug, consent_comercial).' },
       { status: 400, req }
     );
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return jsonResponse({ error: 'Email no válido.' }, { status: 400, req });
+  }
+  if (empresa.length > 200) {
+    return jsonResponse({ error: 'Empresa demasiado larga (máx. 200 caracteres).' }, { status: 400, req });
   }
 
   // ---- Recurso existe y está activo ----
@@ -96,6 +101,7 @@ Deno.serve(async (req) => {
     recurso_slug:        slug,
     email,
     nombre,
+    empresa,
     consent_comercial:   consent,
     consent_ip:          ip,
     consent_user_agent:  ua,

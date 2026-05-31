@@ -1,0 +1,32 @@
+# =====================================================================
+# Archivos descargables — solo viven en Supabase Storage, NO en git
+# ---------------------------------------------------------------------
+# El bucket 'recursos' de Supabase es la fuente de verdad. Si el archivo
+# estuviera en el repo:
+#   1) infla el tamaño del repositorio (los .pbix/.rar pesan MB)
+#   2) cualquiera podría descargarlo directamente saltándose el form
+# =====================================================================
+*.pbix
+*.pbit
+*.rar
+*.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Supabase CLI cache
+supabase/.temp/
+supabase/.branches/
