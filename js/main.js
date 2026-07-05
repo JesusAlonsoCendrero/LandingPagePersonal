@@ -62,6 +62,108 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+// ----------- COUNT-UP helper -----------
+function animateCount(el) {
+  if (el.dataset.done) return;
+  el.dataset.done = '1';
+  const target = parseFloat(el.dataset.count) || 0;
+  const prefix = el.dataset.prefix || '';
+  const suffix = el.dataset.suffix || '';
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) { el.textContent = prefix + target + suffix; return; }
+  const duration = 1200;
+  const start = performance.now();
+  (function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = prefix + Math.round(target * eased) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  })(performance.now());
+}
+
+// ----------- VALOR · línea zigzag que se rellena con el scroll -----------
+(function initValueFlow() {
+  const flow = document.getElementById('valueFlow');
+  if (!flow) return;
+  const svg = flow.querySelector('.value-connector');
+  const bgPath = flow.querySelector('.value-connector-bg');
+  const fillPath = flow.querySelector('.value-connector-fill');
+  const steps = Array.from(flow.querySelectorAll('.value-step'));
+  const nodes = steps.map(s => s.querySelector('.value-node'));
+  if (!svg || !fillPath || !nodes.length) return;
+
+  flow.classList.add('is-live');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let pathLen = 0;
+  let nodeDist = [];   // distancia acumulada de cada nodo a lo largo de la línea
+
+  function build() {
+    const fr = flow.getBoundingClientRect();
+    const pts = nodes.map(n => {
+      const r = n.getBoundingClientRect();
+      return { x: r.left - fr.left + r.width / 2, y: r.top - fr.top + r.height / 2 };
+    });
+    const d = 'M ' + pts.map(p => `${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' L ');
+    bgPath.setAttribute('d', d);
+    fillPath.setAttribute('d', d);
+    svg.setAttribute('viewBox', `0 0 ${fr.width} ${fr.height}`);
+
+    pathLen = fillPath.getTotalLength();
+    fillPath.style.strokeDasharray = pathLen;
+    nodeDist = [0];
+    let acc = 0;
+    for (let i = 1; i < pts.length; i++) {
+      acc += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);
+      nodeDist.push(acc);
+    }
+    update();
+  }
+
+  function update() {
+    const r = flow.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    // "línea de lectura" a media pantalla; progreso según la recorre la sección
+    const readLine = vh * 0.58;
+    let p = (readLine - r.top) / r.height;
+    p = Math.max(0, Math.min(1, p));
+    if (reduced) p = 1;
+
+    const drawn = pathLen * p;
+    fillPath.style.strokeDashoffset = pathLen - drawn;
+
+    steps.forEach((step, i) => {
+      // el paso se "activa" cuando la línea llega a su nodo
+      if (drawn + 4 >= nodeDist[i] || (reduced)) {
+        if (!step.classList.contains('reached')) {
+          step.classList.add('reached');
+          step.querySelectorAll('.value-num[data-count]').forEach(animateCount);
+        }
+      }
+    });
+  }
+
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { update(); ticking = false; });
+  }
+
+  // Reconstruir cuando cambie el tamaño (y tras cargar imágenes/fuentes)
+  let resizeTimer = null;
+  function onResize() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(build, 150);
+  }
+
+  build();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onResize);
+  window.addEventListener('load', build);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
+})();
+
 // ----------- SERVICE CARD TILT -----------
 document.querySelectorAll('.service-card').forEach(card => {
   card.addEventListener('mousemove', e => {
@@ -327,7 +429,7 @@ if (contactForm) {
     note.className = 'form-success';
     note.innerHTML = `
       <div class="form-success-text">
-        <strong>¡Mensaje enviado!</strong> Te respondo en menos de 24 horas.
+        <strong>¡Mensaje enviado!</strong> Te respondo lo antes posible.
       </div>
       <button type="button" class="form-success-action">
         <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -420,7 +522,7 @@ if (contactForm) {
         }
         note.innerHTML = `
           <div class="form-success-text">
-            <strong>¡Mensaje enviado!</strong> Te respondo en menos de 24 horas.
+            <strong>¡Mensaje enviado!</strong> Te respondo lo antes posible.
           </div>
           <button type="button" class="form-success-action">
             <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -450,7 +552,7 @@ if (contactForm) {
         errBox.className = 'form-error';
         contactForm.insertBefore(errBox, submitBtn);
       }
-      errBox.textContent = 'No se pudo enviar el mensaje. Inténtalo de nuevo o escríbeme directamente a jesusalonsocendrero@gmail.com.';
+      errBox.textContent = 'No se pudo enviar el mensaje. Inténtalo de nuevo o escríbeme directamente a jesusalonsodeveloper@gmail.com.';
     }
   });
 }

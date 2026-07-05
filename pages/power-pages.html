@@ -35,7 +35,7 @@
       <ul class="nav-links">
         <li><a href="../index.html#about">Sobre mí</a></li>
         <li><a href="../index.html#services">Servicios</a></li>
-        <!-- <li><a href="../index.html#portfolio">Proyectos</a></li> · oculto -->
+        <li><a href="../index.html#portfolio">Proyectos</a></li>
         <li><a href="../index.html#contact" class="nav-cta">Hablemos</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
@@ -44,7 +44,6 @@
 
   <section class="detail-hero">
     <div class="detail-hero-bg">
-      <div class="grid-overlay"></div>
       <div class="noise"></div>
     </div>
     <div class="container">
@@ -59,6 +58,32 @@
       <p class="detail-subtitle reveal">
         Portales web externos conectados a tu ecosistema Microsoft. Formularios, autoservicio para clientes y acceso seguro a datos sin necesidad de programar.
       </p>
+    </div>
+  </section>
+
+  <!-- ¿QUÉ ES...? -->
+  <section class="tech-intro" style="--accent:#03d4da">
+    <div class="container">
+      <div class="tech-intro-grid">
+        <div class="tech-intro-copy">
+          <div class="tech-intro-eyebrow reveal">¿Qué es Power Pages?</div>
+          <h2 class="tech-intro-title reveal">Portales web <em>conectados a tus datos</em>.</h2>
+          <p class="tech-intro-lead reveal">Power Pages sirve para crear <strong>webs y portales externos</strong> (para clientes, proveedores o socios) conectados de forma segura a tu ecosistema Microsoft, sin programar desde cero.</p>
+          <p class="tech-intro-lead reveal">Ideal para autoservicio: que un cliente rellene un formulario, consulte su expediente o suba documentación, y todo aterrice directo en tus datos.</p>
+          <div class="tech-uses reveal">
+            <span class="tech-use-chip">Portales de cliente</span>
+            <span class="tech-use-chip">Autoservicio</span>
+            <span class="tech-use-chip">Formularios web</span>
+            <span class="tech-use-chip">Registro seguro</span>
+            <span class="tech-use-chip">Zona privada</span>
+          </div>
+        </div>
+        <div class="tech-points">
+          <div class="tech-point reveal"><div class="tech-point-num">1</div><div><h4>Publica</h4><p>Un sitio web profesional con tu marca en poco tiempo.</p></div></div>
+          <div class="tech-point reveal"><div class="tech-point-num">2</div><div><h4>Conecta</h4><p>Formularios y listados enlazados a Dataverse en tiempo real.</p></div></div>
+          <div class="tech-point reveal"><div class="tech-point-num">3</div><div><h4>Protege</h4><p>Acceso seguro con registro, permisos y datos controlados.</p></div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -121,7 +146,7 @@
        ============================================================ -->
   <!-- "Proyectos realizados" oculto hasta tener proyectos publicados.
        Para reactivar: quitar el atributo hidden de la línea siguiente. -->
-  <section class="detail-projects" id="proyectos" hidden>
+  <section class="detail-projects" id="proyectos">
     <div class="container">
       <div class="detail-projects-header">
         <div class="section-tag reveal" style="color:#03d4da;">Proyectos realizados</div>
@@ -129,42 +154,43 @@
           Portales con <em style="color:#03d4da">Power Pages</em>
         </h2>
         <p class="section-desc reveal" style="margin-top:1.25rem;">
-          Portales externos conectados al ecosistema Microsoft. Se irán publicando con capturas y ejemplos reales.
+          Portales externos conectados al ecosistema Microsoft. Haz clic en cualquier imagen para verla a pantalla completa.
         </p>
       </div>
 
-      <article class="project-block reveal" id="proyecto-ejemplo">
+      <article class="project-block reveal" id="proyecto-seguimiento">
         <div class="project-head">
           <div class="project-head-left">
             <div class="project-meta" style="color:#03d4da;">
               <span class="meta-dot"></span>
-              <span>Proyecto · Próximamente</span>
+              <span>Proyecto · Portal de cliente</span>
             </div>
-            <h3 class="project-title">Portal de clientes</h3>
+            <h3 class="project-title">Seguimiento de pedidos en tiempo real</h3>
             <p class="project-summary">
-              Área privada para clientes con acceso a presupuestos, descarga de facturas, estado de pedidos y formularios de soporte conectados directamente a Dataverse.
+              Portal público donde el cliente introduce el código de su pedido y ve <strong>exactamente dónde está su envío</strong>, del almacén a su puerta: los cinco estados del pedido (recibido, en preparación, enviado, en reparto y entregado) con sus fechas, los datos del transportista con su número de seguimiento y hasta la ubicación en el mapa. Construido con <strong>Power Pages y Dataverse</strong>, conectado a <strong>Business Central</strong> para leer los pedidos reales.
             </p>
+            <a class="project-linkedin" href="https://www.linkedin.com/posts/jes%C3%BAs-alonso-cendrero-a68b97226_powerpages-businesscentral-dataverse-activity-7476295792543207424-NjOH" target="_blank" rel="noopener noreferrer">
+              <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>Ver vídeo en LinkedIn</span>
+              <svg class="li-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
           <div class="project-tags">
             <span class="project-tag">Power Pages</span>
             <span class="project-tag">Dataverse</span>
-            <span class="project-tag">Auth</span>
+            <span class="project-tag">Business Central</span>
           </div>
         </div>
 
         <div class="project-gallery">
-          <div class="media-item media-large" data-media-type="placeholder">
-            <div class="media-empty">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18" stroke-linecap="round"/></svg>
-              <span>Home del portal</span>
-            </div>
-          </div>
-          <div class="media-item" data-media-type="placeholder">
-            <div class="media-empty">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="6,4 20,12 6,20" fill="currentColor"/></svg>
-              <span>Vídeo demo</span>
-            </div>
-          </div>
+          <a class="media-item media-large" href="../img/proyectos/PowerPage/1.png" data-media-type="image">
+            <img src="../img/proyectos/PowerPage/1.png" alt="Portal de seguimiento de pedidos — inicio con búsqueda por código y los 5 estados" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerPage/2.png" data-media-type="image">
+            <img src="../img/proyectos/PowerPage/2.png" alt="Portal de seguimiento de pedidos — detalle del pedido con estados, transportista y mapa" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
         </div>
       </article>
 

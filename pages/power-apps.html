@@ -35,7 +35,7 @@
       <ul class="nav-links">
         <li><a href="../index.html#about">Sobre mí</a></li>
         <li><a href="../index.html#services">Servicios</a></li>
-        <!-- <li><a href="../index.html#portfolio">Proyectos</a></li> · oculto -->
+        <li><a href="../index.html#portfolio">Proyectos</a></li>
         <li><a href="../index.html#contact" class="nav-cta">Hablemos</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
@@ -44,7 +44,6 @@
 
   <section class="detail-hero">
     <div class="detail-hero-bg">
-      <div class="grid-overlay"></div>
       <div class="noise"></div>
     </div>
     <div class="container">
@@ -59,6 +58,32 @@
       <p class="detail-subtitle reveal">
         Aplicaciones internas a medida para digitalizar los procesos de tu empresa. Sencillas, accesibles desde cualquier dispositivo y adaptadas a tu forma de trabajar.
       </p>
+    </div>
+  </section>
+
+  <!-- ¿QUÉ ES...? -->
+  <section class="tech-intro" style="--accent:#b86ab8">
+    <div class="container">
+      <div class="tech-intro-grid">
+        <div class="tech-intro-copy">
+          <div class="tech-intro-eyebrow reveal">¿Qué es Power Apps?</div>
+          <h2 class="tech-intro-title reveal">Apps a medida <em>sin meses de desarrollo</em>.</h2>
+          <p class="tech-intro-lead reveal">Power Apps permite crear <strong>aplicaciones internas a medida</strong> —web y móvil— en una fracción del tiempo de un desarrollo tradicional. Formularios, fichas, listados y flujos de trabajo adaptados a cómo trabaja tu equipo.</p>
+          <p class="tech-intro-lead reveal">Es la forma de jubilar esos Excel compartidos que todos tocan a la vez, con datos centralizados, permisos y validaciones.</p>
+          <div class="tech-uses reveal">
+            <span class="tech-use-chip">Gestión interna</span>
+            <span class="tech-use-chip">Sustituir Excel</span>
+            <span class="tech-use-chip">Partes de trabajo</span>
+            <span class="tech-use-chip">Inventario</span>
+            <span class="tech-use-chip">Apps móviles</span>
+          </div>
+        </div>
+        <div class="tech-points">
+          <div class="tech-point reveal"><div class="tech-point-num">1</div><div><h4>Diseña</h4><p>Pantallas y formularios que encajan con tu proceso, no al revés.</p></div></div>
+          <div class="tech-point reveal"><div class="tech-point-num">2</div><div><h4>Conecta</h4><p>Datos en Dataverse, SharePoint o SQL, con seguridad por usuario.</p></div></div>
+          <div class="tech-point reveal"><div class="tech-point-num">3</div><div><h4>Despliega</h4><p>La misma app funciona en el navegador y en el móvil del equipo.</p></div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -121,7 +146,7 @@
        ============================================================ -->
   <!-- "Proyectos realizados" oculto hasta tener proyectos publicados.
        Para reactivar: quitar el atributo hidden de la línea siguiente. -->
-  <section class="detail-projects" id="proyectos" hidden>
+  <section class="detail-projects" id="proyectos">
     <div class="container">
       <div class="detail-projects-header">
         <div class="section-tag reveal" style="color:#b86ab8;">Proyectos realizados</div>
@@ -129,42 +154,110 @@
           Apps construidas en <em style="color:#b86ab8">Power Apps</em>
         </h2>
         <p class="section-desc reveal" style="margin-top:1.25rem;">
-          Aplicaciones internas que pongo en producción para distintos equipos. Se irán publicando con capturas y vídeos demostrativos.
+          Aplicaciones reales puestas en producción. Haz clic en cualquier imagen para verla a pantalla completa.
         </p>
       </div>
 
-      <article class="project-block reveal" id="proyecto-ejemplo">
+      <!-- PROYECTO: Pulse · Control horario y portal del empleado -->
+      <article class="project-block reveal" id="proyecto-rrhh">
         <div class="project-head">
           <div class="project-head-left">
             <div class="project-meta" style="color:#b86ab8;">
               <span class="meta-dot"></span>
-              <span>Proyecto · Próximamente</span>
+              <span>Proyecto · RRHH / Control horario</span>
             </div>
-            <h3 class="project-title">App de gestión interna</h3>
+            <h3 class="project-title">Pulse — portal del empleado</h3>
             <p class="project-summary">
-              Aplicación interna para sustituir hojas de Excel con un flujo claro de altas, ediciones, búsquedas y aprobaciones. Diseño responsive para móvil y escritorio.
+              Aplicación de RRHH para el día a día del equipo. Cada empleado <strong>ficha su entrada y salida</strong> con un clic, controla sus horas (jornada, balance y horas extra), <strong>solicita ausencias</strong>, consulta sus documentos y ve los anuncios de la empresa. Administración gestiona empleados y comunicados desde el mismo sitio. Construida como <strong>Power Apps</strong> (Code App) con <strong>Power Automate</strong> para los avisos y automatismos.
             </p>
+            <a class="project-linkedin" href="https://www.linkedin.com/posts/jes%C3%BAs-alonso-cendrero-a68b97226_powerplatform-powerapps-powerautomate-activity-7467957018469777409-zxII" target="_blank" rel="noopener noreferrer">
+              <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>Ver vídeo en LinkedIn</span>
+              <svg class="li-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Power Apps</span>
+            <span class="project-tag">Power Automate</span>
+            <span class="project-tag">RRHH</span>
+            <span class="project-tag">Control horario</span>
+          </div>
+        </div>
+
+        <div class="carousel" data-autoplay="5000">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="../img/proyectos/PowerApps/inicio-sesion.png" alt="Pulse — inicio de sesión" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/PowerApps/Inicio.png" alt="Pulse — panel de inicio del empleado" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/PowerApps/Fichaje.png" alt="Pulse — fichaje con temporizador y pausas" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/PowerApps/mi-control-horario.png" alt="Pulse — control horario: jornada, balance y horas extra" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/PowerApps/Ausencias.png" alt="Pulse — gestión de ausencias" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/PowerApps/mis-documentos.png" alt="Pulse — documentos del empleado" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/PowerApps/Anuncios.png" alt="Pulse — anuncios de la empresa" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/PowerApps/Empleados.png" alt="Pulse — administración de empleados" loading="lazy" /></div>
+            </div>
+          </div>
+          <button class="carousel-arrow carousel-prev" type="button" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="carousel-arrow carousel-next" type="button" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carousel-dots"></div>
+          <div class="carousel-counter"></div>
+        </div>
+      </article>
+
+      <article class="project-block reveal" id="proyecto-porra">
+        <div class="project-head">
+          <div class="project-head-left">
+            <div class="project-meta" style="color:#b86ab8;">
+              <span class="meta-dot"></span>
+              <span>Proyecto · App interna</span>
+            </div>
+            <h3 class="project-title">Porra Mundial 2026</h3>
+            <p class="project-summary">
+              App completa para gestionar una porra del Mundial 2026: cada participante predice los partidos, el 1.º y 2.º de cada grupo y el campeón; el cuadro eliminatorio se desbloquea solo al cerrar la fase de grupos y el ranking se recalcula automáticamente. Construida íntegramente sobre Power Platform —Power Apps (Code Apps, React/TypeScript) para la interfaz, Dataverse como base de datos y Power Automate para los cálculos y los avisos por Teams.
+            </p>
+            <a class="project-linkedin" href="https://www.linkedin.com/posts/jes%C3%BAs-alonso-cendrero-a68b97226_powerplatform-powerapps-codeapps-activity-7465790242755596288-jO9k" target="_blank" rel="noopener noreferrer">
+              <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>Ver vídeo en LinkedIn</span>
+              <svg class="li-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
           <div class="project-tags">
             <span class="project-tag">Power Apps</span>
             <span class="project-tag">Dataverse</span>
-            <span class="project-tag">Power FX</span>
+            <span class="project-tag">Power Automate</span>
+            <span class="project-tag">React / TypeScript</span>
           </div>
         </div>
 
-        <div class="project-gallery">
-          <div class="media-item media-large" data-media-type="placeholder">
-            <div class="media-empty">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 18h4" stroke-linecap="round"/></svg>
-              <span>Pantalla principal de la app</span>
+        <div class="carousel" data-autoplay="5000">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva1.JPG" alt="Porra Mundial 2026 — portada" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva2.JPG" alt="Porra Mundial 2026 — cómo está construida (Power Platform)" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva3.JPG" alt="Porra Mundial 2026 — diapositiva 3" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva4.JPG" alt="Porra Mundial 2026 — diapositiva 4" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva5.JPG" alt="Porra Mundial 2026 — diapositiva 5" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva6.JPG" alt="Porra Mundial 2026 — grupos y cuadro eliminatorio" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva7.JPG" alt="Porra Mundial 2026 — diapositiva 7" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva8.JPG" alt="Porra Mundial 2026 — diapositiva 8" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva9.JPG" alt="Porra Mundial 2026 — ranking general" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva10.JPG" alt="Porra Mundial 2026 — diapositiva 10" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva11.JPG" alt="Porra Mundial 2026 — diapositiva 11" loading="lazy" /></div>
+              <div class="carousel-slide"><img src="../img/proyectos/porra-mundial/Diapositiva12.JPG" alt="Porra Mundial 2026 — diapositiva 12" loading="lazy" /></div>
             </div>
           </div>
-          <div class="media-item" data-media-type="placeholder">
-            <div class="media-empty">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="6,4 20,12 6,20" fill="currentColor"/></svg>
-              <span>Vídeo demo</span>
-            </div>
-          </div>
+          <button class="carousel-arrow carousel-prev" type="button" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="carousel-arrow carousel-next" type="button" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carousel-dots"></div>
+          <div class="carousel-counter"></div>
         </div>
       </article>
 

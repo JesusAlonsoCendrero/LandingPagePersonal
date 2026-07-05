@@ -36,7 +36,7 @@
       <ul class="nav-links">
         <li><a href="../index.html#about">Sobre mí</a></li>
         <li><a href="../index.html#services">Servicios</a></li>
-        <!-- <li><a href="../index.html#portfolio">Proyectos</a></li> · oculto -->
+        <li><a href="../index.html#portfolio">Proyectos</a></li>
         <li><a href="../index.html#contact" class="nav-cta">Hablemos</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
@@ -45,7 +45,6 @@
 
   <section class="detail-hero">
     <div class="detail-hero-bg">
-      <div class="grid-overlay"></div>
       <div class="noise"></div>
     </div>
     <div class="container">
@@ -60,6 +59,32 @@
       <p class="detail-subtitle reveal">
         Convierte tus datos en decisiones. Dashboards e informes personalizados para tener el control total de tu negocio en tiempo real.
       </p>
+    </div>
+  </section>
+
+  <!-- ¿QUÉ ES...? -->
+  <section class="tech-intro" style="--accent:#F2C811">
+    <div class="container">
+      <div class="tech-intro-grid">
+        <div class="tech-intro-copy">
+          <div class="tech-intro-eyebrow reveal">¿Qué es Power BI?</div>
+          <h2 class="tech-intro-title reveal">Tus datos, convertidos en <em>decisiones</em>.</h2>
+          <p class="tech-intro-lead reveal">Power BI es la herramienta de <strong>análisis y visualización de datos</strong> de Microsoft. Se conecta a tus fuentes —Excel, bases de datos, tu CRM o ERP— y las convierte en <strong>informes visuales e interactivos</strong> que se actualizan solos.</p>
+          <p class="tech-intro-lead reveal">En lugar de perseguir hojas de cálculo, tu equipo abre un panel y ve el estado real del negocio en segundos, desde el ordenador o el móvil.</p>
+          <div class="tech-uses reveal">
+            <span class="tech-use-chip">Cuadros de mando</span>
+            <span class="tech-use-chip">KPIs en tiempo real</span>
+            <span class="tech-use-chip">Informes automáticos</span>
+            <span class="tech-use-chip">Análisis self-service</span>
+            <span class="tech-use-chip">Móvil y web</span>
+          </div>
+        </div>
+        <div class="tech-points">
+          <div class="tech-point reveal"><div class="tech-point-num">1</div><div><h4>Conecta</h4><p>Reúne datos de decenas de orígenes en un único sitio, sin copiar y pegar.</p></div></div>
+          <div class="tech-point reveal"><div class="tech-point-num">2</div><div><h4>Modela</h4><p>Con Power Query y DAX se limpian y relacionan los datos para que cuadren siempre.</p></div></div>
+          <div class="tech-point reveal"><div class="tech-point-num">3</div><div><h4>Visualiza</h4><p>Gráficos, KPIs y filtros interactivos que cualquiera entiende de un vistazo.</p></div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -122,7 +147,7 @@
        ============================================================ -->
   <!-- "Proyectos realizados" oculto hasta tener proyectos publicados.
        Para reactivar: quitar el atributo hidden de la línea siguiente. -->
-  <section class="detail-projects" id="proyectos" hidden>
+  <section class="detail-projects" id="proyectos">
     <div class="container">
       <div class="detail-projects-header">
         <div class="section-tag reveal" style="color:#F2C811;">Proyectos realizados</div>
@@ -134,55 +159,170 @@
         </p>
       </div>
 
-      <!-- PROYECTO 1: Panel RRHH (ejemplo visible) -->
-      <article class="project-block reveal" id="proyecto-rrhh">
+      <!-- PROYECTO: MKDigital · Marketing Performance Dashboard -->
+      <article class="project-block reveal" id="proyecto-mkdigital">
         <div class="project-head">
           <div class="project-head-left">
             <div class="project-meta" style="color:#F2C811;">
               <span class="meta-dot"></span>
-              <span>Proyecto · Recursos Humanos</span>
+              <span>Proyecto · Marketing</span>
             </div>
-            <h3 class="project-title">Panel de Recursos Humanos</h3>
+            <h3 class="project-title">Marketing Performance Dashboard</h3>
             <p class="project-summary">
-              Dashboard ejecutivo para dirección con indicadores clave de plantilla: absentismo, rotación, evolución del headcount, coste por departamento y proyecciones de contratación.
+              Cuadro de mando de marketing digital con la inversión, los ingresos y el rendimiento de cada campaña en una sola pantalla: ROAS, CPA, conversiones, top de campañas y análisis de audiencia por dispositivo, edad, género e intereses. Tres vistas conectadas —Overview, Audience y Performance— que se actualizan de forma automática.
             </p>
           </div>
           <div class="project-tags">
             <span class="project-tag">Power BI</span>
             <span class="project-tag">DAX</span>
             <span class="project-tag">Power Query</span>
+            <span class="project-tag">Marketing</span>
+          </div>
+        </div>
+
+        <div class="project-gallery">
+          <a class="media-item media-large" href="../img/proyectos/PowerBI/MKDigital/Overview.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/MKDigital/Overview.png" alt="MKDigital — vista Overview del dashboard de marketing" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerBI/MKDigital/Audience.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/MKDigital/Audience.png" alt="MKDigital — vista Audience: audiencia por dispositivo, edad, género e intereses" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+        </div>
+      </article>
+
+      <!-- PROYECTO: Dashboard de restaurante "La Comanda" -->
+      <article class="project-block reveal" id="proyecto-restaurante">
+        <div class="project-head">
+          <div class="project-head-left">
+            <div class="project-meta" style="color:#F2C811;">
+              <span class="meta-dot"></span>
+              <span>Proyecto · Hostelería</span>
+            </div>
+            <h3 class="project-title">Dashboard de restaurante «La Comanda»</h3>
+            <p class="project-summary">
+              Cuadro de mando integral para un restaurante. Reúne en un solo sitio las <strong>ventas</strong> (facturación, coste, beneficio, ticket medio y ranking de platos), el <strong>rendimiento del equipo de sala</strong> (comandas y tiempo medio de servicio por empleado), las <strong>reseñas de clientes</strong> y la <strong>gestión del stock</strong>. El dueño ve de un vistazo qué platos dejan más margen, qué camareros rinden mejor y cómo evoluciona el negocio mes a mes.
+            </p>
+            <a class="project-linkedin" href="https://www.linkedin.com/posts/jes%C3%BAs-alonso-cendrero-a68b97226_powerbi-dataanalytics-businessintelligence-activity-7457136211888058369-efm7" target="_blank" rel="noopener noreferrer">
+              <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>Ver vídeo en LinkedIn</span>
+              <svg class="li-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">DAX</span>
+            <span class="project-tag">Power Query</span>
+            <span class="project-tag">Hostelería</span>
+          </div>
+        </div>
+
+        <div class="project-gallery">
+          <a class="media-item media-large" href="../img/proyectos/PowerBI/Restaurante/overview-sales.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/Restaurante/overview-sales.png" alt="La Comanda — indicador de ventas: facturación, beneficio y ranking de platos" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerBI/Restaurante/Empleados.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/Restaurante/Empleados.png" alt="La Comanda — rendimiento del equipo: comandas y tiempo de servicio por empleado" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerBI/Restaurante/review-clientes.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/Restaurante/review-clientes.png" alt="La Comanda — reseñas y valoración de clientes" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerBI/Restaurante/gestion-stock.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/Restaurante/gestion-stock.png" alt="La Comanda — gestión del stock" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+        </div>
+      </article>
+
+      <!-- PROYECTO: App de flota en tiempo real (Microsoft Fabric) -->
+      <article class="project-block reveal" id="proyecto-aviones">
+        <div class="project-head">
+          <div class="project-head-left">
+            <div class="project-meta" style="color:#F2C811;">
+              <span class="meta-dot"></span>
+              <span>Proyecto · Tiempo real (Fabric)</span>
+            </div>
+            <h3 class="project-title">App de flota en tiempo real</h3>
+            <p class="project-summary">
+              Aplicación de monitorización de una flota de aviones construida sobre <strong>Microsoft Fabric</strong>, con datos en <strong>streaming en tiempo real</strong>. Para cada aparato muestra su telemetría (altitud, velocidad, Mach, combustible, temperatura), el estado de los motores y la eficiencia (consumo y CO₂), junto a un modelo 3D interactivo de cada modelo —A320neo, A350-900 y A380-800—. Un ejemplo de cómo Fabric permite llevar el análisis de datos al segundo, no al día.
+            </p>
+            <a class="project-linkedin" href="https://www.linkedin.com/posts/jes%C3%BAs-alonso-cendrero-a68b97226_microsoftfabric-fabricapps-powerbi-activity-7473755229499461632-r_Nq" target="_blank" rel="noopener noreferrer">
+              <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>Ver vídeo en LinkedIn</span>
+              <svg class="li-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Microsoft Fabric</span>
+            <span class="project-tag">Tiempo real</span>
+            <span class="project-tag">Streaming</span>
+            <span class="project-tag">3D</span>
+          </div>
+        </div>
+
+        <div class="project-gallery">
+          <a class="media-item media-large" href="../img/proyectos/PowerBI/aviones-fabric/1.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/aviones-fabric/1.png" alt="App de aviones — telemetría en tiempo real del A320neo" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerBI/aviones-fabric/2.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/aviones-fabric/2.png" alt="App de aviones — vista del A350-900 con datos de flota" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerBI/aviones-fabric/3.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/aviones-fabric/3.png" alt="App de aviones — tercera vista de la flota" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+        </div>
+      </article>
+
+      <!-- PROYECTO: App de objetivos personales (Microsoft Fabric) -->
+      <article class="project-block reveal" id="proyecto-objetivos">
+        <div class="project-head">
+          <div class="project-head-left">
+            <div class="project-meta" style="color:#F2C811;">
+              <span class="meta-dot"></span>
+              <span>Proyecto · Objetivos (Fabric)</span>
+            </div>
+            <h3 class="project-title">App de objetivos personales</h3>
+            <p class="project-summary">
+              App de gestión de objetivos personales sobre <strong>Microsoft Fabric</strong>. Cada persona entra con su usuario y ve <strong>únicamente sus datos</strong>: su valoración global ponderada, el peso y el grado de cumplimiento de cada objetivo —con estados «Conseguido», «En riesgo» o «Crítico»— y su tendencia. Ideal para dirección y RRHH: transparencia total sobre las metas del equipo sin depender de hojas de cálculo.
+            </p>
+            <a class="project-linkedin" href="https://www.linkedin.com/posts/jes%C3%BAs-alonso-cendrero-a68b97226_fabric-app-de-gesti%C3%B3n-de-objetivos-personales-activity-7477741516463996928-jRV2" target="_blank" rel="noopener noreferrer">
+              <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>Ver vídeo en LinkedIn</span>
+              <svg class="li-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Microsoft Fabric</span>
+            <span class="project-tag">Seguridad por usuario</span>
+            <span class="project-tag">Objetivos (OKR)</span>
             <span class="project-tag">RRHH</span>
           </div>
         </div>
 
         <div class="project-gallery">
-          <!--
-            INSTRUCCIONES:
-            - Para imagen: <img src="../img/proyectos/rrhh/dashboard.jpg" alt="..." />
-            - Para vídeo:  <video src="../img/proyectos/rrhh/demo.mp4" muted loop playsinline></video>
-            - Añadir clase "media-large" al .media-item para ocupar 2 columnas
-          -->
-
-          <div class="media-item media-large" data-media-type="placeholder">
-            <div class="media-empty">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l5-5 4 4 3-3 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>Captura general del panel</span>
-            </div>
-          </div>
-
-          <div class="media-item" data-media-type="placeholder">
-            <div class="media-empty">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18" stroke-linecap="round"/><path d="M7 14l4-4 3 3 5-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>Evolución plantilla</span>
-            </div>
-          </div>
-
-          <div class="media-item" data-media-type="placeholder">
-            <div class="media-empty">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="6,4 20,12 6,20" fill="currentColor"/></svg>
-              <span>Vídeo demo (próximamente)</span>
-            </div>
-          </div>
+          <a class="media-item media-large" href="../img/proyectos/PowerBI/objetivos/3.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/objetivos/3.png" alt="App de objetivos — panel personal con valoración ponderada y detalle de objetivos" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerBI/objetivos/1.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/objetivos/1.png" alt="App de objetivos — página de inicio" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerBI/objetivos/4.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/objetivos/4.png" alt="App de objetivos — vista adicional" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
+          <a class="media-item" href="../img/proyectos/PowerBI/objetivos/2.png" data-media-type="image">
+            <img src="../img/proyectos/PowerBI/objetivos/2.png" alt="App de objetivos — inicio de sesión seguro por usuario" loading="lazy" />
+            <div class="media-play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </a>
         </div>
       </article>
 

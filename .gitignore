@@ -11,6 +11,9 @@
 *.rar
 *.zip
 
+# Herramientas locales (Claude Code, config de arranque local)
+.claude/
+
 # OS / editor
 .DS_Store
 Thumbs.db
