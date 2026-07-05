@@ -110,12 +110,9 @@ body:has(a:hover) .cursor-trail { width: 48px; height: 48px; border-color: rgba(
 }
 
 /* ----------- NOISE / BG ----------- */
+/* Textura de ruido desactivada para un fondo más limpio. */
 .noise {
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 .grid-overlay {
@@ -336,25 +333,25 @@ body:has(a:hover) .cursor-trail { width: 48px; height: 48px; border-color: rgba(
 .glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
+  filter: blur(130px);
   pointer-events: none;
 }
 
 .glow-1 {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(0,120,212,0.15) 0%, transparent 70%);
-  top: -200px;
-  right: -100px;
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(0,120,212,0.11) 0%, transparent 70%);
+  top: -220px;
+  right: -120px;
   animation: floatGlow 8s ease-in-out infinite;
 }
 
 .glow-2 {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(0,180,216,0.1) 0%, transparent 70%);
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, rgba(0,180,216,0.07) 0%, transparent 70%);
   bottom: 100px;
-  left: -100px;
+  left: -120px;
   animation: floatGlow 10s ease-in-out infinite reverse;
 }
 
