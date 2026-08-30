@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descargar Prompt de instalación de las Skills de Microsoft — Jesús Alonso</title>
+  <meta name="description" content="Descarga gratis el prompt listo para pegar en Claude Code que instala las Skills oficiales de Power Platform de Microsoft, incluido el plugin de Power Automate. Solo tu email." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/styles.css?v=20260830" />
+
+  <meta name="recurso-slug" content="prompt-skills-microsoft" />
+</head>
+<body
+  data-recurso-slug="prompt-skills-microsoft"
+  data-download-file="../../assets/descargas/prompt-instalacion-skills-microsoft.txt"
+  data-download-name="prompt-instalacion-skills-microsoft.txt">
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="../../index.html" class="nav-logo">JA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../../index.html#about">Sobre mí</a></li>
+        <li><a href="../../index.html#services">Servicios</a></li>
+        <li><a href="../../index.html#contact" class="nav-cta">Hablemos</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="download-hero">
+    <div class="detail-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+    </div>
+
+    <div class="container">
+      <a href="../descargas.html" class="detail-back reveal">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Volver a descargas
+      </a>
+
+      <div class="download-grid">
+
+        <!-- COLUMNA IZQUIERDA: descripción del recurso -->
+        <div class="download-info">
+          <div class="download-badge reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" style="width:22px;height:22px;">
+              <path d="M4 6l5 4-5 4M12 16h8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Claude Code · Prompt gratuito</span>
+          </div>
+
+          <h1 class="download-title reveal">
+            Prompt de instalación <em>Skills de Microsoft</em>
+          </h1>
+
+          <p class="download-lead reveal">
+            Un único prompt, listo para copiar y pegar en Claude Code, que instala las Skills oficiales de Power Platform de Microsoft y deja el plugin de Power Automate funcionando. Claude comprueba requisitos, te guía en el login de Azure y verifica que todo quede operativo.
+          </p>
+
+          <ul class="download-features reveal">
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Archivo <strong>.txt</strong> listo para pegar como primer mensaje en Claude Code</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Instalación guiada paso a paso: requisitos, Azure CLI y <strong>az login</strong></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Deja listo el plugin de <strong>Power Automate</strong> y su servidor MCP (FlowAgent)</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Incluye alternativa manual con los comandos <strong>/plugin</strong> por si el instalador falla</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Verifica al final listando tus entornos de Power Platform</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLUMNA DERECHA: form de descarga -->
+        <div class="download-form-wrap">
+          <div class="download-form-card reveal">
+
+            <!-- Estado inicial: formulario -->
+            <div class="download-step" id="stepForm">
+              <div class="download-form-head">
+                <div class="section-tag" style="color:#00b4d8;margin-bottom:0.5rem;">Descarga gratis</div>
+                <h2>Descarga el prompt</h2>
+                <p>Déjame tu email y acepta las comunicaciones comerciales. La descarga del <strong>.txt</strong> aparece al instante.</p>
+              </div>
+
+              <form class="download-form" id="downloadForm" novalidate>
+                <label class="form-field">
+                  <span class="form-label">Email</span>
+                  <input type="email" name="email" id="downloadEmail" required autocomplete="email" placeholder="tu@email.com" />
+                </label>
+
+                <label class="form-field">
+                  <span class="form-label">Nombre <span class="form-optional">(opcional)</span></span>
+                  <input type="text" name="nombre" autocomplete="given-name" placeholder="Cómo te llamas" />
+                </label>
+
+                <label class="form-field">
+                  <span class="form-label">Empresa</span>
+                  <input type="text" name="empresa" id="downloadEmpresa" required autocomplete="organization" placeholder="Tu empresa o proyecto" />
+                </label>
+
+                <label class="check-field">
+                  <input type="checkbox" name="consentComercial" id="consentComercial" required />
+                  <span class="check-box" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 8l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span class="check-label">
+                    Acepto recibir <strong>comunicaciones comerciales</strong> ocasionales con nuevas plantillas, tips de Power Platform y novedades. Puedo darme de baja en cualquier momento.
+                  </span>
+                </label>
+
+                <p class="form-legal">
+                  Al enviar aceptas la <a href="#" target="_blank" rel="noopener">política de privacidad</a>. Tus datos se almacenan de forma segura y no se comparten con terceros.
+                </p>
+
+                <button type="submit" class="btn btn-primary btn-large form-submit" id="downloadSubmit">
+                  <span>Descargar el prompt</span>
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 3v11M5 10l5 5 5-5M4 18h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </form>
+            </div>
+
+            <!-- Estado éxito: descarga lista -->
+            <div class="download-step" id="stepSuccess" hidden>
+              <div class="download-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h2>¡Descarga lista!</h2>
+              <p>
+                Tu descarga debería empezar automáticamente. Si no es así, pulsa el botón de abajo.
+              </p>
+              <a id="downloadFileBtn" href="../../assets/descargas/prompt-instalacion-skills-microsoft.txt" download="prompt-instalacion-skills-microsoft.txt" class="btn btn-primary btn-large" style="margin-top:1rem;display:inline-flex;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 3v11M5 10l5 5 5-5M4 18h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Descargar el .txt</span>
+              </a>
+              <p class="download-success-meta" style="margin-top:1.5rem;">
+                Ábrelo, copia el bloque del prompt y pégalo como primer mensaje en Claude Code.
+              </p>
+            </div>
+
+            <!-- Estado error -->
+            <div class="download-step" id="stepError" hidden>
+              <div class="download-error-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01" stroke-linecap="round"/></svg>
+              </div>
+              <h2>Algo ha fallado</h2>
+              <p id="errorMsg">No hemos podido procesar tu solicitud. Inténtalo de nuevo en unos segundos.</p>
+              <button type="button" class="btn btn-ghost" id="retryBtn">Volver al formulario</button>
+            </div>
+
+          </div>
+
+          <div class="download-meta reveal">
+            <div class="meta-row">
+              <span class="meta-key">Formato</span>
+              <span class="meta-val">.txt</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-key">Última actualización</span>
+              <span class="meta-val">Agosto 2026</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-key">Compatibilidad</span>
+              <span class="meta-val">Claude Code</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;text-align:center;">
+        <p>© 2026 Jesús Alonso. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/supabase-config.js?v=20260830"></script>
+  <script src="../../js/descarga-directa.js?v=20260830"></script>
+  <script src="../../js/main.js?v=20260830"></script>
+</body>
+</html>

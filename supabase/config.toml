@@ -17,3 +17,7 @@ verify_jwt = false
 
 [functions.confirm-download]
 verify_jwt = false
+
+# registrar-descarga: descargas directas (captura el lead, sin email).
+[functions.registrar-descarga]
+verify_jwt = false
